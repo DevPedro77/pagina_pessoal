@@ -1,0 +1,115 @@
+@import 'maps.less';
+@breackpointMobile: ~"(max-width: 768px)";
+@breackpointTablet: ~"(min-width:768px) and (max-width: 1023px)";
+
+
+.marginBottom8 {
+  margin-bottom: 8px;
+}
+
+
+* {
+  padding: 0;
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background-color: #colors[backgroundColor];
+  color: #colors[textColor];
+}
+li {
+  list-style: none;
+}
+
+.container {
+  max-width: 960px;
+  width: 100%;
+  margin: 0 auto;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  
+  @media @breackpointMobile {
+    max-width: 70%;
+    
+  }
+  
+  @media @breackpointTablet  {
+    max-width: 80%;
+  
+  } 
+}
+
+header {
+    padding-bottom: 24px;
+
+      .profile-avatar{
+        display: block;
+        margin: 0 auto 24px;
+        border-radius: 50%;
+        height: 100px;
+      }
+}
+
+.profile-bio {
+  text-align: center;
+
+    &-name{
+      font-size: 16px;
+      .marginBottom8();
+    }
+
+    &-subtitle{
+      font-size: 14px;
+      .marginBottom8();
+    }
+
+    &-descricao{
+      font-size: 14px;
+      opacity: 0.7;
+      .marginBottom8();
+    }
+}
+
+.social-links {
+  display: flex;
+  justify-content: space-between;
+  max-width: 240px;
+  width: 100%;
+  margin: 0 auto;
+
+      img {
+        transition: all ease .5s;
+        &:hover {
+          transform: scale(1.4);
+        }
+      }
+}
+
+.projects-list {
+  margin-top: 32px;
+
+    &-item {
+        a{
+          text-decoration: none;
+          background-color: #colors[buttonColor];
+          display: block;
+          padding: 16px 20px;
+          margin-bottom: 16px;
+          text-align: center;
+          color: #colors[textColor];
+          font-weight: bold;
+          border-radius: 30px;
+          border: 2px solid #colors[buttonColor];
+          transition: all ease 3s;
+
+
+          &:hover {
+            color: #colors[buttonColor];
+            background-color: transparent;
+          }
+        }
+  }
+}
